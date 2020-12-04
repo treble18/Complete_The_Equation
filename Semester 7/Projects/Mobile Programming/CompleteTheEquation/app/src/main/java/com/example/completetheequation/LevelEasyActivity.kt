@@ -17,6 +17,7 @@ import android.widget.Toast
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.constraintlayout.widget.ConstraintSet
 import kotlinx.android.synthetic.main.activity_level_easy.*
+import kotlinx.android.synthetic.main.activity_level_medium.*
 import org.jetbrains.anko.textColor
 
 class LevelEasyActivity : AppCompatActivity() {
@@ -165,7 +166,23 @@ class LevelEasyActivity : AppCompatActivity() {
                         if(num1.text == temp.text) {
                             score2++
                             llnum1.removeView(llnum1.getChildAt(1))
-                            llBottom.addView(temp)
+//                            llBottom.addView(temp)
+                            llBottom.removeAllViews()
+                            llBottom.addView(zero)
+                            llBottom.addView(one)
+                            llBottom.addView(two)
+                            llBottom.addView(three)
+                            llBottom.addView(four)
+                            llBottom.addView(five)
+                            llBottom.addView(six)
+                            llBottom.addView(seven)
+                            llBottom.addView(eight)
+                            llBottom.addView(nine)
+                            llBottom.addView(add)
+                            llBottom.addView(subtract)
+                            llBottom.addView(multiply)
+                            llBottom.addView(divide)
+
                             num1.visibility = View.INVISIBLE
                             num2.visibility = View.INVISIBLE
                             num3.visibility = View.INVISIBLE
@@ -199,7 +216,23 @@ class LevelEasyActivity : AppCompatActivity() {
                         if (operator.text == temp.text) {
                             score2++
                             llCenter.removeView(llCenter.getChildAt(1))
-                            llBottom.addView(temp)
+//                            llBottom.addView(temp)
+                            llBottom.removeAllViews()
+                            llBottom.addView(zero)
+                            llBottom.addView(one)
+                            llBottom.addView(two)
+                            llBottom.addView(three)
+                            llBottom.addView(four)
+                            llBottom.addView(five)
+                            llBottom.addView(six)
+                            llBottom.addView(seven)
+                            llBottom.addView(eight)
+                            llBottom.addView(nine)
+                            llBottom.addView(add)
+                            llBottom.addView(subtract)
+                            llBottom.addView(multiply)
+                            llBottom.addView(divide)
+
                             num1.visibility = View.INVISIBLE
                             num2.visibility = View.INVISIBLE
                             num3.visibility = View.INVISIBLE
@@ -233,7 +266,23 @@ class LevelEasyActivity : AppCompatActivity() {
                         if (num2.text == temp.text) {
                             score2++
                             llnum2.removeView(llnum2.getChildAt(1))
-                            llBottom.addView(temp)
+//                            llBottom.addView(temp)
+                            llBottom.removeAllViews()
+                            llBottom.addView(zero)
+                            llBottom.addView(one)
+                            llBottom.addView(two)
+                            llBottom.addView(three)
+                            llBottom.addView(four)
+                            llBottom.addView(five)
+                            llBottom.addView(six)
+                            llBottom.addView(seven)
+                            llBottom.addView(eight)
+                            llBottom.addView(nine)
+                            llBottom.addView(add)
+                            llBottom.addView(subtract)
+                            llBottom.addView(multiply)
+                            llBottom.addView(divide)
+
                             num1.visibility = View.INVISIBLE
                             num2.visibility = View.INVISIBLE
                             num3.visibility = View.INVISIBLE
@@ -276,8 +325,24 @@ class LevelEasyActivity : AppCompatActivity() {
                             score2++
                             llnum3.removeView(llnum3.getChildAt(1))
                             llnum3_2.removeView(llnum3_2.getChildAt(1))
-                            llBottom.addView(temp)
-                            llBottom.addView(temp2)
+//                            llBottom.addView(temp)
+//                            llBottom.addView(temp2)
+                            llBottom.removeAllViews()
+                            llBottom.addView(zero)
+                            llBottom.addView(one)
+                            llBottom.addView(two)
+                            llBottom.addView(three)
+                            llBottom.addView(four)
+                            llBottom.addView(five)
+                            llBottom.addView(six)
+                            llBottom.addView(seven)
+                            llBottom.addView(eight)
+                            llBottom.addView(nine)
+                            llBottom.addView(add)
+                            llBottom.addView(subtract)
+                            llBottom.addView(multiply)
+                            llBottom.addView(divide)
+
                             num1.visibility = View.INVISIBLE
                             num2.visibility = View.INVISIBLE
                             num3.visibility = View.INVISIBLE
@@ -495,38 +560,60 @@ class LevelEasyActivity : AppCompatActivity() {
                 view.invalidate()
 
                 val v = event.localState as TextView
-                val owner = v.parent as ViewGroup
-
-                val newView = TextView(this)
-                newView.setId(View.generateViewId())
-                newView.text = v.text
-                newView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 30F)
-                newView.textColor = Color.parseColor("#ffffff")
-                newView.layoutParams = v.layoutParams
-                newView.typeface = v.typeface
-                newView.background = v.background
-                newView.textAlignment = v.textAlignment
-
-                newView.setOnLongClickListener {
-                    val clipText = "You added Seven"
-                    val item = ClipData.Item(clipText)
-                    val mimeTypes = arrayOf(ClipDescription.MIMETYPE_TEXT_PLAIN)
-                    val data = ClipData(clipText, mimeTypes, item)
-
-                    val dragShadowBuilder = View.DragShadowBuilder(it)
-                    it.startDragAndDrop(data, dragShadowBuilder, it, 0)
-
-                    it.visibility = View.INVISIBLE
-                    true
-                }
+                val owner = v.parent as ConstraintLayout
 
                 owner.removeView(v)
-                owner.addView(newView)
+
                 val destination = view as ConstraintLayout
+
+                if(owner == llBottom && destination != llBottom) {
+                    val newView = TextView(this)
+                    newView.setId(View.generateViewId())
+                    newView.text = v.text
+                    newView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 30F)
+                    newView.textColor = Color.parseColor("#ffffff")
+
+                    newView.width = 90
+                    newView.height = 120
+                    newView.typeface = v.typeface
+                    newView.background = v.background
+                    newView.textAlignment = v.textAlignment
+
+                    newView.setOnLongClickListener {
+                        val clipText = "You added Seven"
+                        val item = ClipData.Item(clipText)
+                        val mimeTypes = arrayOf(ClipDescription.MIMETYPE_TEXT_PLAIN)
+                        val data = ClipData(clipText, mimeTypes, item)
+
+                        val dragShadowBuilder = View.DragShadowBuilder(it)
+                        it.startDragAndDrop(data, dragShadowBuilder, it, 0)
+
+                        it.visibility = View.INVISIBLE
+                        true
+                    }
+                    owner.addView(newView)
+
+                    val constraintSet = ConstraintSet()
+                    constraintSet.connect(newView.id, ConstraintSet.LEFT, owner.id, ConstraintSet.LEFT)
+                    constraintSet.connect(newView.id, ConstraintSet.RIGHT, owner.id, ConstraintSet.RIGHT)
+                    constraintSet.setHorizontalBias(newView.id, 0.041f)
+
+                    constraintSet.connect(newView.id, ConstraintSet.TOP, owner.id, ConstraintSet.TOP)
+                    constraintSet.connect(newView.id, ConstraintSet.BOTTOM, owner.id, ConstraintSet.BOTTOM)
+                    constraintSet.setVerticalBias(newView.id, 0.542f)
+
+                    constraintSet.constrainWidth(newView.id, 90)
+                    constraintSet.constrainHeight(newView.id, 120)
+
+                    constraintSet.applyTo(owner)
+
+                    newView.visibility = View.VISIBLE
+                }
+
                 destination.addView(v)
 
-                newView.visibility = View.VISIBLE
                 v.visibility = View.VISIBLE
+
                 true
             }
             DragEvent.ACTION_DRAG_ENDED -> {

@@ -14,6 +14,8 @@ import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.constraintlayout.widget.ConstraintSet
+import kotlinx.android.synthetic.main.activity_level_easy.*
 import kotlinx.android.synthetic.main.activity_level_medium.*
 import org.jetbrains.anko.textColor
 
@@ -190,8 +192,24 @@ class LevelMediumActivity : AppCompatActivity() {
                             score2++
                             llnum1Medium.removeView(llnum1Medium.getChildAt(1))
                             llnum1_2Medium.removeView(llnum1_2Medium.getChildAt(1))
-                            llBottomMedium.addView(temp)
-                            llBottomMedium.addView(temp2)
+//                            llBottomMedium.addView(temp)
+//                            llBottomMedium.addView(temp2)
+                            llBottomMedium.removeAllViews()
+                            llBottomMedium.addView(zeroMedium)
+                            llBottomMedium.addView(oneMedium)
+                            llBottomMedium.addView(twoMedium)
+                            llBottomMedium.addView(threeMedium)
+                            llBottomMedium.addView(fourMedium)
+                            llBottomMedium.addView(fiveMedium)
+                            llBottomMedium.addView(sixMedium)
+                            llBottomMedium.addView(sevenMedium)
+                            llBottomMedium.addView(eightMedium)
+                            llBottomMedium.addView(nineMedium)
+                            llBottomMedium.addView(addMedium)
+                            llBottomMedium.addView(subtractMedium)
+                            llBottomMedium.addView(multiplyMedium)
+                            llBottomMedium.addView(divideMedium)
+
                             num1.visibility = View.INVISIBLE
                             num1_2.visibility = View.INVISIBLE
                             num2.visibility = View.INVISIBLE
@@ -227,7 +245,23 @@ class LevelMediumActivity : AppCompatActivity() {
                         if (operator.text == temp.text) {
                             score2++
                             llCenterMedium.removeView(llCenterMedium.getChildAt(1))
-                            llBottomMedium.addView(temp)
+//                            llBottomMedium.addView(temp)
+                            llBottomMedium.removeAllViews()
+                            llBottomMedium.addView(zeroMedium)
+                            llBottomMedium.addView(oneMedium)
+                            llBottomMedium.addView(twoMedium)
+                            llBottomMedium.addView(threeMedium)
+                            llBottomMedium.addView(fourMedium)
+                            llBottomMedium.addView(fiveMedium)
+                            llBottomMedium.addView(sixMedium)
+                            llBottomMedium.addView(sevenMedium)
+                            llBottomMedium.addView(eightMedium)
+                            llBottomMedium.addView(nineMedium)
+                            llBottomMedium.addView(addMedium)
+                            llBottomMedium.addView(subtractMedium)
+                            llBottomMedium.addView(multiplyMedium)
+                            llBottomMedium.addView(divideMedium)
+
                             num1.visibility = View.INVISIBLE
                             num1_2.visibility = View.INVISIBLE
                             num2.visibility = View.INVISIBLE
@@ -263,7 +297,23 @@ class LevelMediumActivity : AppCompatActivity() {
                         if (num2.text == temp.text) {
                             score2++
                             llnum2Medium.removeView(llnum2Medium.getChildAt(1))
-                            llBottomMedium.addView(temp)
+//                            llBottomMedium.addView(temp)
+                            llBottomMedium.removeAllViews()
+                            llBottomMedium.addView(zeroMedium)
+                            llBottomMedium.addView(oneMedium)
+                            llBottomMedium.addView(twoMedium)
+                            llBottomMedium.addView(threeMedium)
+                            llBottomMedium.addView(fourMedium)
+                            llBottomMedium.addView(fiveMedium)
+                            llBottomMedium.addView(sixMedium)
+                            llBottomMedium.addView(sevenMedium)
+                            llBottomMedium.addView(eightMedium)
+                            llBottomMedium.addView(nineMedium)
+                            llBottomMedium.addView(addMedium)
+                            llBottomMedium.addView(subtractMedium)
+                            llBottomMedium.addView(multiplyMedium)
+                            llBottomMedium.addView(divideMedium)
+
                             num1.visibility = View.INVISIBLE
                             num1_2.visibility = View.INVISIBLE
                             num2.visibility = View.INVISIBLE
@@ -317,9 +367,25 @@ class LevelMediumActivity : AppCompatActivity() {
                             llnum3Medium.removeView(llnum3Medium.getChildAt(1))
                             llnum3_2Medium.removeView(llnum3_2Medium.getChildAt(1))
                             llnum3_3Medium.removeView(llnum3_3Medium.getChildAt(1))
-                            llBottomMedium.addView(temp)
-                            llBottomMedium.addView(temp2)
-                            llBottomMedium.addView(temp3)
+//                            llBottomMedium.addView(temp)
+//                            llBottomMedium.addView(temp2)
+//                            llBottomMedium.addView(temp3)
+                            llBottomMedium.removeAllViews()
+                            llBottomMedium.addView(zeroMedium)
+                            llBottomMedium.addView(oneMedium)
+                            llBottomMedium.addView(twoMedium)
+                            llBottomMedium.addView(threeMedium)
+                            llBottomMedium.addView(fourMedium)
+                            llBottomMedium.addView(fiveMedium)
+                            llBottomMedium.addView(sixMedium)
+                            llBottomMedium.addView(sevenMedium)
+                            llBottomMedium.addView(eightMedium)
+                            llBottomMedium.addView(nineMedium)
+                            llBottomMedium.addView(addMedium)
+                            llBottomMedium.addView(subtractMedium)
+                            llBottomMedium.addView(multiplyMedium)
+                            llBottomMedium.addView(divideMedium)
+
                             num1.visibility = View.INVISIBLE
                             num1_2.visibility = View.INVISIBLE
                             num2.visibility = View.INVISIBLE
@@ -539,39 +605,60 @@ class LevelMediumActivity : AppCompatActivity() {
                 view.invalidate()
 
                 val v = event.localState as TextView
-                val owner = v.parent as ViewGroup
-
-                val newView = TextView(this)
-                newView.setId(View.generateViewId())
-                newView.text = v.text
-                newView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 30F)
-                newView.textColor = Color.parseColor("#ffffff")
-                newView.layoutParams = v.layoutParams
-                newView.typeface = v.typeface
-                newView.background = v.background
-                newView.textAlignment = v.textAlignment
-
-                newView.setOnLongClickListener {
-                    val clipText = "You added Seven"
-                    val item = ClipData.Item(clipText)
-                    val mimeTypes = arrayOf(ClipDescription.MIMETYPE_TEXT_PLAIN)
-                    val data = ClipData(clipText, mimeTypes, item)
-
-                    val dragShadowBuilder = View.DragShadowBuilder(it)
-                    it.startDragAndDrop(data, dragShadowBuilder, it, 0)
-
-                    it.visibility = View.INVISIBLE
-                    true
-                }
+                val owner = v.parent as ConstraintLayout
 
                 owner.removeView(v)
 
                 val destination = view as ConstraintLayout
-                destination.addView(v)
-                owner.addView(newView)
 
-                newView.visibility = View.VISIBLE
+                if(owner == llBottomMedium && destination != llBottomMedium) {
+                    val newView = TextView(this)
+                    newView.setId(View.generateViewId())
+                    newView.text = v.text
+                    newView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 30F)
+                    newView.textColor = Color.parseColor("#ffffff")
+
+                    newView.width = 90
+                    newView.height = 120
+                    newView.typeface = v.typeface
+                    newView.background = v.background
+                    newView.textAlignment = v.textAlignment
+
+                    newView.setOnLongClickListener {
+                        val clipText = "You added Seven"
+                        val item = ClipData.Item(clipText)
+                        val mimeTypes = arrayOf(ClipDescription.MIMETYPE_TEXT_PLAIN)
+                        val data = ClipData(clipText, mimeTypes, item)
+
+                        val dragShadowBuilder = View.DragShadowBuilder(it)
+                        it.startDragAndDrop(data, dragShadowBuilder, it, 0)
+
+                        it.visibility = View.INVISIBLE
+                        true
+                    }
+                    owner.addView(newView)
+
+                    val constraintSet = ConstraintSet()
+                    constraintSet.connect(newView.id, ConstraintSet.LEFT, owner.id, ConstraintSet.LEFT)
+                    constraintSet.connect(newView.id, ConstraintSet.RIGHT, owner.id, ConstraintSet.RIGHT)
+                    constraintSet.setHorizontalBias(newView.id, 0.041f)
+
+                    constraintSet.connect(newView.id, ConstraintSet.TOP, owner.id, ConstraintSet.TOP)
+                    constraintSet.connect(newView.id, ConstraintSet.BOTTOM, owner.id, ConstraintSet.BOTTOM)
+                    constraintSet.setVerticalBias(newView.id, 0.542f)
+
+                    constraintSet.constrainWidth(newView.id, 90)
+                    constraintSet.constrainHeight(newView.id, 120)
+
+                    constraintSet.applyTo(owner)
+
+                    newView.visibility = View.VISIBLE
+                }
+
+                destination.addView(v)
+
                 v.visibility = View.VISIBLE
+
                 true
             }
             DragEvent.ACTION_DRAG_ENDED -> {
