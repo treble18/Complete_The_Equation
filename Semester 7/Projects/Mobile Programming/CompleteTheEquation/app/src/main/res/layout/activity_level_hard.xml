@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:text="@string/high_score"
             android:textColor="@color/fontColor"
-            android:textSize="24sp"
+            android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -63,10 +63,10 @@
             android:id="@+id/highScoreValueHard"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="14dp"
+            android:layout_marginStart="8dp"
             android:text="0"
             android:textColor="@color/fontColor"
-            android:textSize="24sp"
+            android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -74,6 +74,19 @@
             app:layout_constraintStart_toEndOf="@+id/highScoreHard"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.489" />
+
+        <TextView
+            android:id="@+id/timerHard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="@color/fontColor"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -90,7 +103,7 @@
             android:layout_height="40dp"
             android:layout_marginStart="8dp"
             android:layout_weight="1"
-            android:background="@drawable/rounded_corner"
+            android:background="@drawable/rounded_corner2"
             android:orientation="horizontal"
             android:textColor="@color/fontColor"
             android:textStyle="bold"
@@ -102,7 +115,7 @@
                 android:id="@+id/operatorHard"
                 android:layout_width="30dp"
                 android:layout_height="40dp"
-                android:background="@drawable/rounded_corner"
+                android:background="@drawable/rounded_corner2"
                 android:text="2"
                 android:textAlignment="center"
                 android:textColor="@color/fontColor"
@@ -249,7 +262,7 @@
             android:id="@+id/equalHard"
             android:layout_width="30dp"
             android:layout_height="40dp"
-            android:background="@drawable/rounded_corner"
+            android:background="@drawable/rounded_corner2"
             android:text="="
             android:textAlignment="center"
             android:textColor="@color/fontColor"
@@ -401,6 +414,19 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.83" />
+
+        <Button
+            android:id="@+id/startHard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/ll_style"
+            android:text="@string/start"
+            android:textColor="@color/fontColor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -578,7 +604,7 @@
         <TextView
             android:id="@+id/nineHard"
             android:layout_width="30dp"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:background="@drawable/rounded_corner"
             android:text="@string/nine"
             android:textAlignment="center"
@@ -597,7 +623,7 @@
             android:id="@+id/addHard"
             android:layout_width="30dp"
             android:layout_height="40dp"
-            android:background="@drawable/rounded_corner"
+            android:background="@drawable/rounded_corner2"
             android:text="@string/add"
             android:textAlignment="center"
             android:textSize="30sp"
@@ -615,7 +641,7 @@
             android:id="@+id/divideHard"
             android:layout_width="30dp"
             android:layout_height="40dp"
-            android:background="@drawable/rounded_corner"
+            android:background="@drawable/rounded_corner2"
             android:text="@string/divide"
             android:textAlignment="center"
             android:textSize="30sp"
@@ -633,7 +659,7 @@
             android:id="@+id/subtractHard"
             android:layout_width="30dp"
             android:layout_height="40dp"
-            android:background="@drawable/rounded_corner"
+            android:background="@drawable/rounded_corner2"
             android:text="@string/subtract"
             android:textAlignment="center"
             android:textSize="30sp"
@@ -651,7 +677,7 @@
             android:id="@+id/multiplyHard"
             android:layout_width="30dp"
             android:layout_height="40dp"
-            android:background="@drawable/rounded_corner"
+            android:background="@drawable/rounded_corner2"
             android:text="@string/multiply"
             android:textAlignment="center"
             android:textSize="30sp"
